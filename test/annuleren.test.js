@@ -6,6 +6,10 @@ test('om 9:30 mag je nog annuleren', () => {
   assert.equal(kanAnnuleren(new Date('2026-11-12T09:30')), true);
 });
 
+test('om 9:59 mag je nog net annuleren', () => {
+  assert.equal(kanAnnuleren(new Date('2026-11-12T09:59')), true);
+});
+
 test('om precies 10:00 mag je niet meer annuleren', () => {
   assert.equal(kanAnnuleren(new Date('2026-11-12T10:00')), false);
 });
